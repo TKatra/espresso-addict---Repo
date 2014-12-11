@@ -1,0 +1,34 @@
+{
+  "image": "bar",
+  "description": "You are in a crowded bar where everyone is friendly. But no coffee in sight. Everyone's drinking beer. Out of the corner of your eye you can see some broken chairs",
+  "choices": {
+    "Go to the back room" : {
+        "goto": "bar-back-room"
+      },
+    "Look at broken chairs" : {
+        "description" : "You see some broken chairs, must be some leftovers from a bar fight.<br/>One of the chair legs has fallen off.",
+        "happening": "looked at broken chair",
+        "show only once": true
+      },
+    "Take chair leg" : {
+        "description" : "You take the chair leg, feels sturdy enough.",
+        "if has happened": "looked at broken chair",
+        "gift": "Chair leg",
+        "show only once": true
+      },
+    "Wait": [
+      {
+        "description": "You wait. Beer, beer, beer... You don't care...",
+        "health": -3
+      },
+      {
+        "description": "It's kind of nice here. But no coffee..."
+      },
+      {
+        "description": "The bartender offers you a can of beer for free... \"Come on... Get in to the groove... You can pay me for the next one!\"",
+        "gift": "a can of beer",
+        "show only once": true
+      }
+    ]
+  }
+}

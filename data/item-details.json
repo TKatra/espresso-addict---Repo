@@ -1,0 +1,21 @@
+{
+	"a can of beer" : {
+
+	},
+	"Crowbar" : {
+
+	},
+	"Screwdriver" : {
+
+	},
+	"Duct tape" : {
+
+	},
+	"Chair leg" : {
+
+	},
+	"Home made Toothpick" : {
+		"is combined by" : "Screwdriver,Duct tape,Chair leg",
+		"craft description" : "You took the screwdriver and taped it on to the chairleg.<br/>Maybe this will work for Trex."
+	}
+}

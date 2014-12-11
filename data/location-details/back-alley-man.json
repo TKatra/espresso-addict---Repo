@@ -1,0 +1,42 @@
+{
+  "image": "back-alley-man",
+  "description": "You walk closer to the man.<br/>He feels even creepier up close...",
+  "choices": {
+      "Go back" : {
+        "goto": "back-alley"
+      },
+      "Talk to the man" : {
+        "description" : "\"You look like someone that could need something like this.\"<br/>He shows you a crowbar. You notice a red stain on it.",
+        "happening": "he hands you a crowbar",
+        "show only once" : true
+      },
+      "Ask if he really don't have some coffe " : {
+          "description" : "\"Wow, you really look desperate... Here, have some money, you need it more than I do.\"",
+          "money": 5,
+          "show only once" : true
+        },
+      "Ask about the red stain" : {
+          "description" : "\"Don't worry about it. I opened a jar of straberry jam with it earlier.\"",
+          "if has happened" : "he hands you a crowbar",
+          "show only once" : true
+        },
+      "Take crowbar" : {
+        "image": "back-alley-man-eye",
+        "description" : "\"NEVER TELL ANYONE WHERE YOU GOT IT!\"",
+        "if has happened" : "he hands you a crowbar",
+        "gift": "Crowbar",
+        "show only once" : true
+      },
+    "Wait": [
+      {
+        "description": "The man is looking at you showing a slight smirk.",
+        "health": -3
+      },
+      {
+        "description": "\"You want something?\" the man says.",
+        "health": -3
+      }
+    ]
+  }
+}
+

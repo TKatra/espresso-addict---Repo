@@ -1,0 +1,25 @@
+{
+  "image": "tool-shed",
+  "description": "You found an old tool shed. Nobody is around, it might be abandoned",
+  "choices": {
+    "Take screwdriver" : {
+      "description" : "You find a screwdriver. Might work as a toothpick for Trex.",
+      "if has happened": "Trex wants a toothpick",
+      "happening" : "taken screwdriver",
+      "gift" : "Screwdriver",
+      "show only once": true
+    },
+    "Take Duct tape" : {
+      "description" : "Duct tape! Always useful!",
+      "gift" : "Duct tape",
+      "show only once": true
+      },
+    "Wait": [
+      {
+        "description": "You cant find any coffe... And this place smells...",
+        "health" : -5
+      }
+    ]
+  }  
+}
+

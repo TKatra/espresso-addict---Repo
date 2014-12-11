@@ -1,0 +1,30 @@
+{
+  "image": "house-inside",
+  "description": "Inside the house, the air is filled with the calming aroma of tasty tasty coffe.<br/>And then you spot the biggest cup of coffe you've ever seen! Awesome!",
+  "choices": {
+    "Leave house": {
+        "goto": "house"
+      },
+    "Drink giant cup of coffe": {
+      "description" : "You drink the entire cup and feel relieved.",
+      "espressocups": 3,
+      "health": 50,
+      "show only once" : true
+    },
+    "Wait": [
+      {
+        "description": "You wait... and nothing happens..."
+      },
+      {
+        "description": "Nice picture. Although I would prefere a picture of my lucky mug back at home."
+      },
+      {
+        "description": "Is this really the only room in this whole house?"
+      },
+      {
+        "description": "You still can't stop being amazed over the hugeness of that coffe cup."
+      }
+    ]
+  }
+}
+

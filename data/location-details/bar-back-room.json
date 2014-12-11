@@ -1,0 +1,48 @@
+{
+  "image": "bar-back-room",
+  "description": "In the back room you meet a frog-man and a drunk dinosaur.",
+  "choices": {
+    "Go back" : {
+        "goto": "bar"
+      },
+    "Introduce yourself" : {
+        "description" : "The frog-man looks up and greets you: \"Hi mate, how ya doin? I'm Greg and the big fella's name's Trex\"",
+        "happening": "Introduce yourself",
+        "show only once": true
+      },
+    "Talk to Greg" : {
+        "description": "\"You need coffe? Sorry can't help you with that. Trex might be able to help\"",
+        "if has happened": "Introduce yourself",
+        "show only once": true
+      },
+    "Talk to Trex" : {
+      "description" : "\"Coffe? Is that what you need? *Burp* Excuse me.<br/>I've got something stuck in my teeth. If you can find me something to pick my teeth with then I'd be greatful. A small toothpick just wont work for me\"",
+      "if has happened": "Introduce yourself",
+      "happening": "Trex wants a toothpick",
+      "show only once": true
+      },
+   "Give screwdriver to Trex" : {
+        "description" : "\"Nice idea with the screwdriver, but my arms are too short to use it properly...<br/>Maybe you can find something longer\"",
+        "if has happened": "taken screwdriver",
+        "happening": "Trex needs bigger toothpick",
+        "show only once": true
+      },
+    "Give home made toothpick to Trex" : {
+        "description" : "\"Oh! Thank you so much! You're a real pal. Here you go buddy, buy some coffe with this.\"<br/>He hands you two espresso cups worth of money.",
+        "if has happened": "Trex needs bigger toothpick",
+        "if in bag": "Home made Toothpick",
+        "money" : 10,
+        "show only once": true
+      },
+    
+    "Wait": [
+      {
+        "description": " You still feel the need for coffe rumbling in you",
+        "health": -3
+      },
+      {
+        "description": "They sit and have a nice chat."
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "image": "back-alley",
+  "description": "You're in a back alley and see a not-at-all suspicious looking man<br/>You also notise a pair of leggs of another man behind some trash.",
+  "choices": {
+    "Ask for some coffe" : {
+        "description" : "\"I don't have no coffe for you, but I have something else you might find interesting.<br/>Come here.\"",
+        "happening": "asked for coffee",
+        "show only once" : true
+      },
+      "Go to the man" : {
+        "if has happened": "asked for coffee",
+        "goto": "back-alley-man"
+      },
+      "Ask about the guy in the back" : {
+        "description" : "\"Don't worry about him, he's just... sleeping.\"",
+        "show only once" : true
+      },
+    "Wait": [
+      {
+        "description": "The man is looking at you showing a sligt smirk.",
+        "health": -3
+      },
+      {
+        "description": "\"You want something?\" the man says.",
+        "health": -3
+      }
+    ]
+  }
+}
+

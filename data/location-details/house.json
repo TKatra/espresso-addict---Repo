@@ -1,0 +1,49 @@
+{
+  "image": "house",
+  "description": "You find a beautiful house.<br/>For some reason you seem fixated at this house.",
+  "choices": {
+    "Open door":{
+        "if has happened": "smelled coffe",
+        "description": "Dang it! The door is locked! Just my luck...<br/>If only I could open the door.",
+        "happening": "smelled coffe, tried to open door",
+        "health": -5,
+        "show only once" : true
+      },
+      "Kick down door":{
+        "if has happened": "smelled coffe, tried to open door",
+        "description": "You kick the door with all your might. But nothing happens.<br/>Exept you hurt your foot... wimp.",
+        "health": -20
+      },
+      "Break into house":{
+        "if has happened": "smelled coffe, tried to open door",
+        "if in bag": "Crowbar",
+        "description": "That did it! The door is open!",
+        "happening": "broke open door",
+        "show only once" : true
+      },
+    "Enter house": {
+        "if has happened": "broke open door",
+        "goto": "house-inside"
+      },
+    "Wait": [
+      {
+        "description": "You wait... and nothing happens...",
+        "health": -3
+      },
+      {
+        "description": "You keep stairing at the amazing house...",
+        "health": -3
+      },
+      {
+        "description": "You won't get anything by stairing at the house ya know.",
+        "health": -3
+      },
+      {
+        "description": "*sniff* *sniff* What is that smell? Coffe? Coffe inside the house!?",
+        "happening": "smelled coffe",
+        "show only once": true
+      }
+    ]
+  }
+}
+
